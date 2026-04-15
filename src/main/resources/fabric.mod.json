@@ -5,7 +5,7 @@
 	"name": "${name}",
 	"description": "${description}",
 	"authors": [
-		"lowercasebtw",
+		"lowercasebtw"
 	],
 	"contact": {
 		"sources": "${source}",

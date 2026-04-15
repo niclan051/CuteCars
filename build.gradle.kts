@@ -78,7 +78,6 @@ loom {
     }
 
     runConfigs.remove(runConfigs["server"]) // Removes server run configs
-    accessWidenerPath = rootProject.file("src/main/resources/${mod.id}.accesswidener")
 
     runs {
         afterEvaluate {
