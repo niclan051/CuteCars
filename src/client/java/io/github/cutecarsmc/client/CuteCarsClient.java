@@ -21,14 +21,12 @@
 
 package io.github.cutecarsmc.client;
 
-import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
 import io.github.cutecarsmc.client.config.CuteCarsClientConfig;
 import net.fabricmc.api.ClientModInitializer;
 
-@Entrypoint
 public final class CuteCarsClient implements ClientModInitializer {
-    @Override
-    public void onInitializeClient() {
-        CuteCarsClientConfig.load();
-    }
+	@Override
+	public void onInitializeClient() {
+		CuteCarsClientConfig.load();
+	}
 }

@@ -17,6 +17,20 @@
 	"license": "${license}",
 	"icon": "assets/${id}/icon.png",
 	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"io.github.cutecarsmc.client.CuteCarsClient"
+		],
+		"main": [
+			"io.github.cutecarsmc.CuteCarsMain"
+		],
+		"modmenu": [
+			"io.github.cutecarsmc.client.config.ModMenuIntegration"
+		],
+		"fabric-datagen": [
+			"io.github.cutecarsmc.client.datagen.CuteCarsDataGenerator"
+		]
+	},
 	"depends": {
 		"fabricloader": ">=${fabric_loader_version}",
 		"minecraft": "${minecraft_version_range}",

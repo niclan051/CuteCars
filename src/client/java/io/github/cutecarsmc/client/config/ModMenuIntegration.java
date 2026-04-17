@@ -23,9 +23,7 @@ package io.github.cutecarsmc.client.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
 
-@Entrypoint(value = "modmenu")
 public final class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {

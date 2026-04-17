@@ -21,7 +21,6 @@
 
 package io.github.cutecarsmc.client.datagen;
 
-import dev.kikugie.fletching_table.annotation.fabric.Entrypoint;
 import io.github.cutecarsmc.client.datagen.assets.CuteCarsModelProvider;
 import io.github.cutecarsmc.client.datagen.data.CuteCarsBlockLootTableProvider;
 import io.github.cutecarsmc.client.datagen.data.CuteCarsRecipeProvider;
@@ -31,15 +30,14 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 @SuppressWarnings("unused")
-@Entrypoint("fabric-datagen")
 public final class CuteCarsDataGenerator implements DataGeneratorEntrypoint {
-    @Override
-    public void onInitializeDataGenerator(final FabricDataGenerator fabricDataGenerator) {
-        final var pack = fabricDataGenerator.createPack();
-        pack.addProvider(CuteCarsItemTagProvider::new);
-        pack.addProvider(CuteCarsBlockTagProvider::new);
-        pack.addProvider(CuteCarsRecipeProvider::new);
-        pack.addProvider(CuteCarsBlockLootTableProvider::new);
-        pack.addProvider(CuteCarsModelProvider::new);
-    }
+	@Override
+	public void onInitializeDataGenerator(final FabricDataGenerator fabricDataGenerator) {
+		final var pack = fabricDataGenerator.createPack();
+		pack.addProvider(CuteCarsItemTagProvider::new);
+		pack.addProvider(CuteCarsBlockTagProvider::new);
+		pack.addProvider(CuteCarsRecipeProvider::new);
+		pack.addProvider(CuteCarsBlockLootTableProvider::new);
+		pack.addProvider(CuteCarsModelProvider::new);
+	}
 }
