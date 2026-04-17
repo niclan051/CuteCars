@@ -39,11 +39,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Player.class)
-public abstract class MixinPlayer extends Avatar {
+abstract class PlayerMixin extends Avatar {
     @Shadow
     public abstract @NonNull ItemStack getWeaponItem();
 
-    protected MixinPlayer(final EntityType<? extends LivingEntity> type, final Level level) {
+    protected PlayerMixin(final EntityType<? extends LivingEntity> type, final Level level) {
         super(type, level);
     }
 
