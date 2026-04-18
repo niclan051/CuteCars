@@ -22,6 +22,9 @@
 package io.github.cutecarsmc.client.config;
 
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
+import dev.isxander.yacl3.config.v2.api.SerialEntry;
+import dev.isxander.yacl3.config.v2.api.autogen.AutoGen;
+import dev.isxander.yacl3.config.v2.api.autogen.TickBox;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
 import dev.isxander.yacl3.platform.YACLPlatform;
 import io.github.cutecarsmc.CuteCars;
@@ -33,9 +36,15 @@ public final class CuteCarsClientConfig {
         .serializer((config) -> GsonConfigSerializerBuilder.create(config)
             .setPath(YACLPlatform.getConfigDir().resolve(CuteCars.MOD_ID + "_client.json"))
             .build()
-        ).build();
+        )
+		.id(CuteCars.withPath("meow"))
+		.build();
 
     // TODO: Add fields here (annotate with SerialEntry)
+	@SerialEntry
+	@AutoGen(category = "mrow")
+	@TickBox
+	public boolean enableUwuification = false;
 
     public static Screen getConfigScreen(final @Nullable Screen parent) {
         return CONFIG.generateGui().generateScreen(parent); // TODO
